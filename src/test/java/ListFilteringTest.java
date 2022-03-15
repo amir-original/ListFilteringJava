@@ -8,12 +8,22 @@ public class ListFilteringTest {
 
 
     @Test
-    void should_Return_Null_If_All_data_In_List_Are_Strings() {
+    void should_Return_Null_If_All_data_In_List_Are_String() {
         List list = Arrays.asList("g","gf","a","b");
         ListFilter listFilter = new ListFilter();
         List result = listFilter.filterStrings(list);
 
         List expectedArray = Arrays.asList();
+        Assertions.assertEquals(expectedArray,result);
+    }
+
+    @Test
+    void should_return_1_2_3_If_All_Data_In_List_Are_Integer() {
+        List list = Arrays.asList(1,2,3);
+        ListFilter listFilter = new ListFilter();
+        List result = listFilter.filterStrings(list);
+
+        List expectedArray = Arrays.asList(1,2,3);
         Assertions.assertEquals(expectedArray,result);
     }
 
