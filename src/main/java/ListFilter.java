@@ -7,14 +7,12 @@ public class ListFilter {
         List result = new ArrayList();
 
         for(int pointer = 0; pointer < list.size() ; pointer ++){
-            if (isInteger(list, pointer)){
+            ObjectList objectList = new ObjectList(list.get(pointer));
+            if (objectList.isInteger()) {
                 result.add(list.get(pointer));
             }
         }
         return result;
     }
 
-    private boolean isInteger(List list, int pointer) {
-        return list.get(pointer).getClass() == Integer.class;
-    }
 }
