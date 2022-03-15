@@ -1,2 +1,2 @@
-# ListFillteringJava
+# ListFilteringJava
 This Kata is for java.
